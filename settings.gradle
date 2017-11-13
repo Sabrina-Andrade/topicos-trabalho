@@ -1,0 +1,1 @@
+include "trab-rest-api", "trab-rest-core", "trab-rest-ear", "trab-rest-war", "trab-rest-ejb", "trab-rest-ejb-client"
