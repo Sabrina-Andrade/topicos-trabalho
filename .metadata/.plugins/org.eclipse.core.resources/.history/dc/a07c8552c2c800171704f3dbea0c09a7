@@ -1,0 +1,6 @@
+package br.edu.univas.si8.ta.hello.ejb.beans;
+
+@Stateless
+@Remote(CalculatorRemote.class)
+@Local(CalculatorLocal.class)
+public class CalculatorBean implements CalculatorLocal, CalculatorRemote {

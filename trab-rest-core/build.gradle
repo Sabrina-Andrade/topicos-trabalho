@@ -1,0 +1,4 @@
+dependencies {
+compile project(':trab-rest-api')
+compile project(':trab-rest-ejb-client')
+}

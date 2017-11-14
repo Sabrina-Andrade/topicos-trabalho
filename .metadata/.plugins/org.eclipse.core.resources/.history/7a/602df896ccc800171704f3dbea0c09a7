@@ -1,0 +1,22 @@
+package br.edu.univas.si8.ta.trab.rest.impl;
+
+import javax.ejb.EJB;
+import javax.enterprise.context.RequestScoped;
+import javax.ws.rs.client.Client;
+
+@RequestScoped
+public class ClientServiceImpl implements ClientService {
+	
+	@EJB(mappedName = "java:app/trab-rest-ejb-0.1-SNAPSHOT/ClientBean!br.edu.univas.si8.ta.trab.ejb.interfaces.ClientRemote")
+	private Client client;
+	
+	public String[] listClientNames() {
+		return client.listClientNames();
+	}
+	
+	public String saveNewClient(String name, String email) {
+		client.createNewClient(name, email);
+		return "{\"message\": \"Success\"}"
+	}
+
+}

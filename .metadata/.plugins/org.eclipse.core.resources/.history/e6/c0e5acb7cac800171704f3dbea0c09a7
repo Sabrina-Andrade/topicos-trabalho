@@ -1,0 +1,10 @@
+package br.edu.univas.si8.ta.trab.rest.impl;
+
+import javax.enterprise.context.RequestScoped;
+
+@RequestScoped
+public class ClientServiceImpl implements ClientService{
+	
+	
+
+}

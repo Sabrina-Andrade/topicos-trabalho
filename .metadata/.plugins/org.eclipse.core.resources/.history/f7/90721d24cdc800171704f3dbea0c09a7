@@ -1,0 +1,7 @@
+package br.edu.univas.si8.ta.trab.ejb.interfaces;
+
+public interface Inventory {
+	
+	void createNewCliente(String clienteNome);
+	String[] listClientesNomes();
+}

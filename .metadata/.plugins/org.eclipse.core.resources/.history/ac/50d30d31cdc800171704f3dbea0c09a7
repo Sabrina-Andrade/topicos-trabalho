@@ -1,0 +1,15 @@
+package br.edu.univas.si8.ta.trab.rest.application;
+
+import javax.ws.rs.ApplicationPath;
+
+@ApplicationPath("/rest")
+public class RestApplication {
+	@Override
+	public Set<Class<?>> getClasses() {
+	Set<Class<?>> classes = new HashSet<>();
+	classes.add(HelloServiceImpl.class);
+	classes.add(InventoryServiceImpl.class);
+	return classes;
+	}
+	}
+

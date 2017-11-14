@@ -1,0 +1,20 @@
+apply plugin: 'ear'
+dependencies {
+deploy project(path: ':trab-rest-war', configuration: 'archives')
+deploy project(path: ':trab-rest-ejb')
+earlib project(':trab-rest-core')
+earlib project(':trab-rest-api')
+earlib project(':trab-rest-ejb-client')
+}
+ear {
+deploymentDescriptor {
+def warName = project(':trab-rest-war').name
+def warVersion = project(':trab-rest-war').version
+def warFileName = warName + '-' + warVersion + '.war'
+webModule(warFileName, 'trab')
+def ejbName = project(':trab-rest-ejb').name
+def ejbVersion = project(':trab-rest-ejb').version
+def ejbFileName = ejbName + '-' + ejbVersion + '.jar'
+module(ejbFileName, 'ejb')
+}
+}

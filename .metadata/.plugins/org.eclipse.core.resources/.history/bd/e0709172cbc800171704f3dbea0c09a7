@@ -1,0 +1,19 @@
+package br.edu.univas.si8.ta.trab.ejb.dao;
+
+import java.util.List;
+
+import javax.persistence.PersistenceContext;
+
+import br.edu.univas.si8.ta.trab.ejb.entities.Client;
+
+public class ClientDAO {
+	@PersistenceContext(unitName = "clientes")
+	private EntityManager ;
+	public void insert(Client cliente) {
+	ce.persist(cliente);
+	}
+	public List<Client> listAll() {
+	return ce.createQuery("from clientes c", Client.class).getResultList();
+	}
+	}
+
